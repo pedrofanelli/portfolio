@@ -49,17 +49,17 @@ const GetParticles = () => {
               quantity: 4,
             },
             repulse: {
-              distance: 200,
+              distance: 100,
               duration: 0.4,
             },
           },
         },
         particles: {
           color: {
-            value: "#f6f4f3",
+            value: "#F03A47",
           },
           links: {
-            color: "#f6f4f3",
+            color: "#F03A47",
             distance: 150,
             enable: true,
             opacity: 0.5,
