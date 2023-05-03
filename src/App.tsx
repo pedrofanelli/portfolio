@@ -32,7 +32,7 @@ function App() {
             options={{
                 background: {
                     color: {
-                        value: "#0d47a1",
+                        value: "#183059",
                     },
                 },
                 fpsLimit: 120,
@@ -60,10 +60,10 @@ function App() {
                 },
                 particles: {
                     color: {
-                        value: "#ffffff",
+                        value: "#f6f4f3",
                     },
                     links: {
-                        color: "#ffffff",
+                        color: "#f6f4f3",
                         distance: 150,
                         enable: true,
                         opacity: 0.5,
@@ -79,7 +79,7 @@ function App() {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 6,
+                        speed: 3,
                         straight: false,
                     },
                     number: {
