@@ -1,9 +1,12 @@
-div {
+#headContainer {
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
 }
 
-div h1 {
+#headContainer h1 {
   color: whitesmoke;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -20,12 +23,22 @@ div h1 {
     100% {font-size: 3em;}
 }
 
-div h1:hover {
-    text-shadow: 2px 2px 3px #F6F4F3;
+#headContainer h1:hover {
+    text-shadow: 1px 1px 4px #F6F4F3;
 }
 
 @media only screen and (max-width: 840px) {
-    div h1 {
+    #headContainer h1 {
         text-align: center;
     }
 }
+
+#headText {
+    color: whitesmoke;
+    position: absolute;
+    top: 180px;
+    margin: 15px;
+    font-size: 1.5em;
+    text-align: center;
+}
+
