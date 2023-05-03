@@ -19,7 +19,7 @@ function App() {
 
   const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
-      await console.log(container);
+      console.log(container);
     },
     []
   );
@@ -30,11 +30,11 @@ function App() {
             init={particlesInit}
             loaded={particlesLoaded}
             options={{
-                background: {
+                /* background: {
                     color: {
                         value: "#183059",
                     },
-                },
+                }, */
                 fpsLimit: 120,
                 interactivity: {
                     events: {
@@ -79,7 +79,7 @@ function App() {
                             default: "bounce",
                         },
                         random: false,
-                        speed: 3,
+                        speed: 2,
                         straight: false,
                     },
                     number: {
@@ -102,6 +102,7 @@ function App() {
                 detectRetina: true,
             }}
         />
+        
   </>);
 }
 
