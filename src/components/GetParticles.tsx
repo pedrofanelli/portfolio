@@ -66,7 +66,7 @@ const GetParticles = () => {
             width: 1,
           },
           collisions: {
-            enable: true,
+            enable: false,
           },
           move: {
             direction: "none",
