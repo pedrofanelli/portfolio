@@ -10,14 +10,14 @@
   color: whitesmoke;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 3em;
+  font-size: 3.5em;
   text-shadow: 3px 3px 4px #f03a47;
   animation-name: sizeRepeat;
   animation-duration: 6s;
   animation-iteration-count: infinite;
 }
 
-@keyframes sizeRepeat {
+/* @keyframes sizeRepeat {
   0% {
     font-size: 3em;
   }
@@ -27,7 +27,7 @@
   100% {
     font-size: 3em;
   }
-}
+} */
 
 #headContainer h1:hover {
   text-shadow: 1px 1px 4px #f6f4f3;

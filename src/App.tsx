@@ -1,4 +1,3 @@
-import MiddleText from "./components/MiddleText";
 import TopHead from "./components/TopHead";
 import GetParticles from "./components/GetParticles";
 
@@ -10,7 +9,7 @@ function App() {
   return (<>
     <GetParticles />
     <TopHead />
-    <MiddleText />
+    
   </>);
 }
 
