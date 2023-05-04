@@ -19,6 +19,7 @@ const TopHead = () => {
           repellat natus sunt!
         </div>
       </div>
+      <div style={{overflow:"hidden", position:"relative", height:"200px"}}>
       <div className="wrapper">
         <div className="rainbow">
           <span></span>
@@ -31,6 +32,7 @@ const TopHead = () => {
           <div className="body"></div>
           <div className="head"></div>
         </div>
+      </div>
       </div>
     </>
   );

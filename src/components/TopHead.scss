@@ -65,19 +65,19 @@
 .wrapper {
   position: absolute;
   top: 25%;
-  left: 50%;
-  width: 400px;
+  // left: 50%;
+  width: 3200px;
   height: 300px;
   margin-top: -150px;
   margin-left: -200px;
-  border-width: 1px;
+  // border-width: 1px;
   overflow: hidden;
-  border-style: solid;
-  border-color: #0259b2;
+  // border-style: solid;
+  // border-color: #0259b2;
   //background: #013366;
-  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.3);
-  -webkit-animation: caja 2400ms infinite;
-  animation: caja 2400ms infinite;
+  // box-shadow: 0 10px 100px rgba(0, 0, 0, 0.3);
+  -webkit-animation: caja 8s ease-in infinite;
+  animation: caja 8s ease-in infinite;
 }
 
 .nyan-cat {
@@ -1465,17 +1465,17 @@
 
 @-webkit-keyframes caja {
   0% {
-    left: 20%;
+    left: -112%;
   }
   100% {
-    left: 50%;
+    left: 10%;
   }
 }
 @keyframes caja {
   0% {
-    left: 20%;
+    left: -112%;
   }
   100% {
-    left: 50%;
+    left: 10%;
   }
 }

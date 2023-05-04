@@ -1,6 +1,6 @@
 import MiddleText from "./components/MiddleText";
 import TopHead from "./components/TopHead";
-import GetParticles from "./components/getParticles";
+import GetParticles from "./components/GetParticles";
 
 // import './App.css'
 
