@@ -41,7 +41,7 @@ const Transition = () => {
     observer.observe(boxElement);
   }
 
-  
+
   function buildThresholdList() {
     let thresholds = [];
     let numSteps = 20;
@@ -52,10 +52,13 @@ const Transition = () => {
     }
   
     thresholds.push(0);
+    
     return thresholds;
   }
 
-  function handleIntersect(entries:any, observer:any) {
+  function handleIntersect(entries:any, /* observer:any */) {
+    
+    // Logic to differentiate between increasing or decreasing the viewport
     entries.forEach((entry:any) => {
       if (entry.intersectionRatio > prevRatio) {
         entry.target.style.backgroundColor = increasingColor.replace(
