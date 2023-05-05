@@ -8,14 +8,15 @@
 
 #headContainer h1 {
   color: whitesmoke;
-  text-transform: uppercase;
+  //text-transform: uppercase;
   letter-spacing: 0.05em;
-  font-size: 3.5em;
+  font-size: 4em;
   text-shadow: 3px 3px 4px #f03a47;
-  animation-name: sizeRepeat;
-  animation-duration: 6s;
-  animation-iteration-count: infinite;
+  //animation-name: sizeRepeat;
+  //animation-duration: 6s;
+  //animation-iteration-count: infinite;
   z-index: 1;
+  user-select: none;
 }
 
 /* @keyframes sizeRepeat {

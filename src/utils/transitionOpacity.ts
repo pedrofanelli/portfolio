@@ -18,12 +18,12 @@ function handleIntersect(entries: any) {
   );
 }
 
-const transitionOpacity = (element: any) => {
+const transitionOpacity = (element: any, marg:boolean=false) => {
   let observer;
 
   let options = {
     root: null,
-    rootMargin: "0px",
+    rootMargin: marg ? "-200px 0px -200px 0px" : "0px",
     threshold: buildThresholdList(),
   };
 
