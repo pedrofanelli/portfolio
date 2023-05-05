@@ -4,15 +4,15 @@ import "./Transition.scss";
 const Transition = () => {
   //const numSteps = 20.0;
   let boxElement: any;
-  let prevRatio = 0.0;
-  let increasingColor = "rgba(40, 40, 190, ratio)";
-  let decreasingColor = "rgba(190, 40, 40, ratio)";
+  // let prevRatio = 0.0;
+  // let increasingColor = "rgba(40, 40, 190, ratio)";
+  // let decreasingColor = "rgba(190, 40, 40, ratio)";
 
   // Set things up
   window.addEventListener(
     "load",
     (event) => {
-      boxElement = document.querySelector("#box");
+      boxElement = document.querySelector(".transition");
       console.log("HOLA", event);
 
       createObserver();
@@ -57,7 +57,7 @@ const Transition = () => {
   function handleIntersect(entries: any /* observer:any */) {
     // Logic to differentiate between increasing or decreasing the viewport
     entries.forEach((entry: any) => {
-      if (entry.intersectionRatio > prevRatio) {
+      /* if (entry.intersectionRatio > prevRatio) {
         entry.target.style.backgroundColor = increasingColor.replace(
           "ratio",
           entry.intersectionRatio
@@ -69,21 +69,20 @@ const Transition = () => {
         );
       }
 
-      prevRatio = entry.intersectionRatio;
+      prevRatio = entry.intersectionRatio; */
+
+      entry.target.style.opacity = entry.intersectionRatio
+
     });
   }
 
   return (
-    <div
-      style={{
-        color: "whitesmoke",
-      }}
-    >
-      <div id="box">
-        <div className="vertical">
-          Welcome to <strong>The Box!</strong>
-        </div>
-      </div>
+    <div className="transition">
+      <h2>Buenas</h2>
+      <h2>Buenas</h2>
+      <h2>Buenas</h2>
+      <h2>Buenas</h2>
+      <img src="src/assets/cat.jpg" alt="Cat pic" />
     </div>
   );
 };
