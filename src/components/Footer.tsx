@@ -27,9 +27,9 @@ const Footer = () => {
       </div>
       <div className="footer">
         <div className="iconCont">
-            
-            <div>Hola</div>
-            <div>Hola</div>
+          <img id="linkedin" src="src/assets/linkedin-logo.png" alt="" />
+          <div>Hola</div>
+          <div>Hola</div>
         </div>
       </div>
     </>
