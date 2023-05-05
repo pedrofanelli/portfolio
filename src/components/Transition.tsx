@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import "./Transition.scss";
 import transitionOpacity from "../utils/transitionOpacity";
+import Card from "../commons/Card";
 
 const Transition = () => {
   let container: any;
@@ -17,18 +18,7 @@ const Transition = () => {
   return (
     <>
       {varios.map(() => (
-        <>
-          <div className="titleContainer">
-            <h2 id="title">The Movie DataBase</h2>
-          </div>
-          <div className="card">
-            <h2>Buenas</h2>
-            <h2>Buenas</h2>
-            <h2>Buenas</h2>
-            <h2>Buenas</h2>
-            <img src="src/assets/cat.jpg" alt="Cat pic" />
-          </div>
-        </>
+        <Card />
       ))}
     </>
   );
