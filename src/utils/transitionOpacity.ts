@@ -18,8 +18,8 @@ function handleIntersect(entries: any) {
   );
 }
 
-const transitionOpacity = (element: any, marg:boolean=false) => {
-  let observer;
+const transitionOpacity = (element: any, marg: boolean = false) => {
+  let observer: any;
 
   let options = {
     root: null,
@@ -28,7 +28,10 @@ const transitionOpacity = (element: any, marg:boolean=false) => {
   };
 
   observer = new IntersectionObserver(handleIntersect, options);
-  observer.observe(element);
+
+  element.forEach((el: any) => {
+    observer.observe(el);
+  });
 
   return;
 };

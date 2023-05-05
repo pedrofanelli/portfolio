@@ -3,25 +3,33 @@ import "./Transition.scss";
 import transitionOpacity from "../utils/transitionOpacity";
 
 const Transition = () => {
-  let boxElement: any;
+  let container: any;
   let title1: any;
+  let varios = [1, 2, 3];
 
   useEffect(() => {
-    boxElement = document.querySelector(".transition");
-    title1 = document.querySelector("#test");
-    transitionOpacity(boxElement);
+    container = document.querySelectorAll(".card");
+    title1 = document.querySelectorAll("#title");
+    transitionOpacity(container);
     transitionOpacity(title1, true);
   }, []);
 
-  return (<>
-    <div className="title01"><h2 id="test">The Movie DataBase</h2></div>
-    <div className="transition">
-      <h2>Buenas</h2>
-      <h2>Buenas</h2>
-      <h2>Buenas</h2>
-      <h2>Buenas</h2>
-      <img src="src/assets/cat.jpg" alt="Cat pic" />
-    </div>
+  return (
+    <>
+      {varios.map(() => (
+        <>
+          <div className="titleContainer">
+            <h2 id="title">The Movie DataBase</h2>
+          </div>
+          <div className="card">
+            <h2>Buenas</h2>
+            <h2>Buenas</h2>
+            <h2>Buenas</h2>
+            <h2>Buenas</h2>
+            <img src="src/assets/cat.jpg" alt="Cat pic" />
+          </div>
+        </>
+      ))}
     </>
   );
 };

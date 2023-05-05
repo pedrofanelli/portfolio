@@ -1,4 +1,4 @@
-.transition {
+.card {
     color: whitesmoke;
     margin: 15px;
     font-size: 1.5em;
@@ -14,18 +14,18 @@
     transition: opacity 200ms;
 }
 
-.transition h2 {
+.card h2 {
     z-index: 1;
 }
 
-.transition img {
+.card img {
     height: 400px;
     z-index: 1;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.title01 {
+.titleContainer {
     color: whitesmoke;
     margin: 15px;
     font-size: 4em;
@@ -39,6 +39,6 @@
     user-select: none;
 }
 
-.title01 h2 {
+.titleContainer h2 {
     z-index: 1;
 }
