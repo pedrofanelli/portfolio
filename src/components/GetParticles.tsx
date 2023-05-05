@@ -22,6 +22,7 @@ const GetParticles = () => {
 
   return (
     <Particles
+      style={{zIndex:0}}
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}

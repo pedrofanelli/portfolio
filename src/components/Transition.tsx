@@ -2,7 +2,6 @@
 import "./Transition.scss";
 
 const Transition = () => {
-      
   //const numSteps = 20.0;
   let boxElement: any;
   let prevRatio = 0.0;
@@ -14,14 +13,14 @@ const Transition = () => {
     "load",
     (event) => {
       boxElement = document.querySelector("#box");
-        console.log("HOLA", event);
-        
+      console.log("HOLA", event);
+
       createObserver();
     },
     false
   );
 
-    /* useEffect(() => {
+  /* useEffect(() => {
         
         boxElement = document.querySelector("#box");
 
@@ -30,36 +29,34 @@ const Transition = () => {
 
   function createObserver() {
     let observer;
-  
+
     let options = {
       root: null,
       rootMargin: "0px",
       threshold: buildThresholdList(),
     };
-  
+
     observer = new IntersectionObserver(handleIntersect, options);
     observer.observe(boxElement);
   }
 
-
   function buildThresholdList() {
     let thresholds = [];
     let numSteps = 20;
-  
+
     for (let i = 1.0; i <= numSteps; i++) {
       let ratio = i / numSteps;
       thresholds.push(ratio);
     }
-  
+
     thresholds.push(0);
-    
+
     return thresholds;
   }
 
-  function handleIntersect(entries:any, /* observer:any */) {
-    
+  function handleIntersect(entries: any /* observer:any */) {
     // Logic to differentiate between increasing or decreasing the viewport
-    entries.forEach((entry:any) => {
+    entries.forEach((entry: any) => {
       if (entry.intersectionRatio > prevRatio) {
         entry.target.style.backgroundColor = increasingColor.replace(
           "ratio",
@@ -71,19 +68,15 @@ const Transition = () => {
           entry.intersectionRatio
         );
       }
-  
+
       prevRatio = entry.intersectionRatio;
     });
   }
-  
 
   return (
     <div
       style={{
-        top: "120%",
         color: "whitesmoke",
-        position: "absolute",
-        display: "block",
       }}
     >
       <div id="box">

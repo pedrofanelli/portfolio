@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  // position: relative;
 }
 
 #headContainer h1 {
@@ -15,6 +15,7 @@
   animation-name: sizeRepeat;
   animation-duration: 6s;
   animation-iteration-count: infinite;
+  z-index: 1;
 }
 
 /* @keyframes sizeRepeat {
@@ -41,11 +42,12 @@
 
 #headText {
   color: whitesmoke;
-  position: absolute;
-  top: 10em;
+  //position: absolute;
+  //top: 10em;
   margin: 15px;
   font-size: 1.5em;
   text-align: center;
+  z-index: 1;
 }
 
 .body,
