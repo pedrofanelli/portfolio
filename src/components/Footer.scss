@@ -10,12 +10,29 @@
 .iconCont {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-#linkedin {
+.icon {
     height: 40px;
-    color: whitesmoke;
-    background-color: white;
+    background-color: transparent;
+    margin: 15px;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
+
+.contactFoot {
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contactInfo {
+  text-align: center;
+  opacity: 0.8;
+  margin-top: 7px;
 }
 
 // Credits to Gajus Kuizinas: https://codepen.io/gajus/pen/oNrbQL
