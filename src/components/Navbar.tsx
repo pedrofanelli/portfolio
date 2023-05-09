@@ -11,9 +11,8 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 
-const pages = ["Products", "Pricing", "Blog"];
-
 function Navbar() {
+  const pages = ["Projects", "Get in Contact"];
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
@@ -46,6 +45,7 @@ function Navbar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              ":hover":{"textShadow":"1px 1px 4px white"}
             }}
           >
             PJFE
@@ -106,17 +106,18 @@ function Navbar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
+              ":hover":{"textShadow":"1px 1px 4px white"}
             }}
           >
             PJFE
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, marginLeft:"20px" }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2, color: "white", display: "block", fontSize:"15px", ":hover":{"textShadow":"1px 1px 4px white"} }}
               >
                 {page}
               </Button>

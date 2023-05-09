@@ -17,8 +17,8 @@ const Transition = () => {
 
   return (
     <>
-      {varios.map(() => (
-        <Card />
+      {varios.map((key) => (
+        <Card key={key} />
       ))}
     </>
   );
