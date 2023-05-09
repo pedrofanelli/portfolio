@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 
 function Navbar() {
-  const pages = ["Projects", "Get in Contact"];
+  const pages = ["Projects", "Contact"];
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
@@ -117,7 +117,7 @@ function Navbar() {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block", fontSize:"15px", ":hover":{"textShadow":"1px 1px 4px white"} }}
+                sx={{ my: 2, color: "white", display: "block", fontSize:"20px", ":hover":{"textShadow":"1px 1px 4px white"} }}
               >
                 {page}
               </Button>

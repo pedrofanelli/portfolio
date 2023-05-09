@@ -1467,3 +1467,41 @@
     left: 10%;
   }
 }
+
+@media only screen and (max-width: 500px) {
+  @-webkit-keyframes caja {
+    0% {
+      left: -350%;
+    }
+    100% {
+      left: -110%;
+    }
+  }
+  @keyframes caja {
+    0% {
+      left: -350%;
+    }
+    100% {
+      left: -110%;
+    }
+  }
+}
+
+/* @media only screen and (max-width: 1000px) {
+  @-webkit-keyframes caja {
+    0% {
+      left: -180%;
+    }
+    100% {
+      left: 10%;
+    }
+  }
+  @keyframes caja {
+    0% {
+      left: -180%;
+    }
+    100% {
+      left: 10%;
+    }
+  }
+} */
