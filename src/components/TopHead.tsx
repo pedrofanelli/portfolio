@@ -52,21 +52,6 @@ const TopHead = () => {
           repellat natus sunt!
         </div>
       </div>
-      {/* <div style={{overflow:"hidden", position:"relative", height:"200px"}}>
-      <div className="wrapper">
-        <div className="rainbow">
-          <span></span>
-        </div>
-        <div className="nyan-cat">
-          <div className="feet"></div>
-          <div className="tail">
-            <span></span>
-          </div>
-          <div className="body"></div>
-          <div className="head"></div>
-        </div>
-      </div>
-      </div> */}
     </>
   );
 };
