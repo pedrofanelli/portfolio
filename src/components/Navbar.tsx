@@ -12,7 +12,7 @@ import MenuItem from "@mui/material/MenuItem";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 
 function Navbar() {
-  const pages = ["Projects", "Contact"];
+  const pages = ["TMDB", "Mobile Factory", "Broken Office"];
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
@@ -45,7 +45,7 @@ function Navbar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
-              ":hover":{"textShadow":"1px 1px 4px white"}
+              ":hover": { textShadow: "1px 1px 4px white" },
             }}
           >
             PJFE
@@ -106,23 +106,47 @@ function Navbar() {
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
-              ":hover":{"textShadow":"1px 1px 4px white"}
+              ":hover": { textShadow: "1px 1px 4px white" },
             }}
           >
             PJFE
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, marginLeft:"20px" }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              marginLeft: "20px",
+            }}
+          >
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block", fontSize:"20px", ":hover":{"textShadow":"1px 1px 4px white"} }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontSize: "20px",
+                  ":hover": { textShadow: "1px 1px 4px white" },
+                }}
               >
                 {page}
               </Button>
             ))}
           </Box>
+          <Button
+            onClick={handleCloseNavMenu}
+            sx={{
+              my: 2,
+              color: "white",
+              display: "block",
+              fontSize: "20px",
+              ":hover": { textShadow: "1px 1px 4px white" },
+            }}
+          >
+            Contact
+          </Button>
         </Toolbar>
       </Container>
     </AppBar>
