@@ -22,8 +22,6 @@ function handleIntersect2(entries: any) {
   let hola = document.getElementById("containerBtns");
   entries.forEach(
     (entry: any) => {
-      console.log(entries);
-      
       if (entry.intersectionRatio > 0.15) {
         hola && (hola.style.display = 'block')
       } else {

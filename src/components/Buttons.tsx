@@ -16,7 +16,6 @@ const Buttons = () => {
       </div>
       <div id="btn2">
         <SmartphoneIcon
-          //sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
           fontSize="large"
         />
       </div>
