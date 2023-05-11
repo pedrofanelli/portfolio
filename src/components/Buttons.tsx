@@ -4,6 +4,7 @@ import "./Buttons.scss";
 import LocalMoviesIcon from "@mui/icons-material/LocalMovies";
 import SmartphoneIcon from "@mui/icons-material/Smartphone";
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import ArrowCircleUpIcon from '@mui/icons-material/ArrowCircleUp';
 const Buttons = () => {
   useEffect(() => {
     let container = document.querySelectorAll("#btnsVision");
@@ -21,6 +22,9 @@ const Buttons = () => {
       </div>
       <div id="btn3">
         <SupportAgentIcon fontSize="large" />
+      </div>
+      <div id="btn4">
+      <ArrowCircleUpIcon fontSize="large" />
       </div>
     </div>
   );

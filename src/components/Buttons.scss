@@ -1,7 +1,6 @@
 #containerBtns {
   color: white;
   font-size: 3em;
-  
 }
 
 #btn1 {
@@ -13,13 +12,12 @@
   border-radius: 15px 0 0 15px;
   transition: width 0.5s ease;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  z-index: 1;
 }
 
 #btn1:hover {
   width: 60px;
   transition: width 0.5s ease;
-  
 }
 
 #btn2 {
@@ -31,7 +29,7 @@
   border-radius: 15px 0 0 15px;
   transition: width 0.5s ease;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  z-index: 1;
 }
 #btn2:hover {
   width: 60px;
@@ -46,9 +44,29 @@
   border-radius: 15px 0 0 15px;
   transition: width 0.5s ease;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+  z-index: 1;
 }
 #btn3:hover {
   width: 60px;
   transition: width 0.5s ease;
+}
+
+#btn4 {
+  position: fixed;
+  bottom: 0;
+  right: 100px;
+  background-color: #2a9d8f;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px 15px 0 0;
+  transition: height 0.5s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#btn4:hover {
+  height: 60px;
+  transition: height 0.5s ease;
 }
