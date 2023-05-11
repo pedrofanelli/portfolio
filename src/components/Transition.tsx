@@ -13,11 +13,11 @@ const Transition = () => {
     transitionOpacity(container);
     transitionOpacity(title1, true);
   }, []);
-
+  
   return (
     <>
       {varios.map((key) => (
-        <Card key={key} />
+        <Card key={key} id={key} />
       ))}
     </>
   );
