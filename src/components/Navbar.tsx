@@ -1,4 +1,4 @@
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, useEffect } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,8 +12,13 @@ import MenuItem from "@mui/material/MenuItem";
 import Tooltip from "@mui/material/Tooltip";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import "./Navbar.scss";
+import transitionOpacity from "../utils/transitionOpacity";
 
 function Navbar() {
+  useEffect(() => {
+    let nav = document.querySelectorAll("#navv");
+    transitionOpacity(nav);
+  }, []);
   const pages = ["The Movie Database", "The Mobile Factory", "Broken Office"];
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
@@ -92,7 +97,7 @@ function Navbar() {
                 display: { xs: "block", md: "none" },
               }}
               disableScrollLock={true}
-              MenuListProps={{sx : {bgcolor:"#525a61", color:"white"}}}
+              MenuListProps={{ sx: { bgcolor: "#525a61", color: "white" } }}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -145,7 +150,7 @@ function Navbar() {
                   fontSize: "20px",
                 }}
               >
-               ⬇ My Projects ⬇
+                ⬇ My Projects ⬇
               </Button>
             </Tooltip>
             <Menu
@@ -165,10 +170,14 @@ function Navbar() {
               onClose={handleProjBtnClose}
               //MenuListProps={{onMouseLeave : handleProjBtnClose}}
               disableScrollLock={true}
-              MenuListProps={{sx : {bgcolor:"#525a61", color:"white"}}}
+              MenuListProps={{ sx: { bgcolor: "#525a61", color: "white" } }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleProjBtnClose} sx={{height:"50px"}}>
+                <MenuItem
+                  key={page}
+                  onClick={handleProjBtnClose}
+                  sx={{ height: "50px" }}
+                >
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
