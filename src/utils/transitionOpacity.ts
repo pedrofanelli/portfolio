@@ -18,7 +18,20 @@ function handleIntersect(entries: any) {
   );
 }
 
-const transitionOpacity = (element: any, marg: boolean = false) => {
+function handleIntersect2(entries: any) {
+  let hola = document.getElementById("test");
+  entries.forEach(
+    (entry: any) => {
+      if (entry.intersectionRatio > 0.13) {
+        hola && (hola.style.display = 'block')
+      } else {
+        hola && (hola.style.display = 'none')
+      }
+    }
+  );
+}
+
+const transitionOpacity = (element: any, marg: boolean = false, sticky: boolean = false) => {
   let observer: any;
 
   let options = {
@@ -27,7 +40,7 @@ const transitionOpacity = (element: any, marg: boolean = false) => {
     threshold: buildThresholdList(),
   };
 
-  observer = new IntersectionObserver(handleIntersect, options);
+  observer = new IntersectionObserver(sticky ? handleIntersect2 : handleIntersect, options);
 
   element.forEach((el: any) => {
     observer.observe(el);
