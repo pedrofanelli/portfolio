@@ -9,11 +9,14 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import Tooltip from "@mui/material/Tooltip";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 
 function Navbar() {
   const pages = ["TMDB", "Mobile Factory", "Broken Office"];
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+
+  const [prueba, setPrueba] = useState<null | HTMLElement>(null);
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -21,6 +24,14 @@ function Navbar() {
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
+  };
+
+  const handleProjBtnOpen = (event: MouseEvent<HTMLElement>) => {
+    setPrueba(event.currentTarget);
+  };
+
+  const handleProjBtnClose = () => {
+    setPrueba(null);
   };
 
   return (
@@ -79,6 +90,7 @@ function Navbar() {
               sx={{
                 display: { xs: "block", md: "none" },
               }}
+              disableScrollLock={true}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -119,34 +131,59 @@ function Navbar() {
               marginLeft: "20px",
             }}
           >
-            {pages.map((page) => (
+            <Tooltip title="Projects">
               <Button
-                key={page}
-                onClick={handleCloseNavMenu}
+                onClick={handleProjBtnOpen}
+                onMouseOver={handleProjBtnOpen}
                 sx={{
                   my: 2,
                   color: "white",
                   display: "block",
                   fontSize: "20px",
-                  ":hover": { textShadow: "1px 1px 4px white" },
                 }}
               >
-                {page}
+                My Projects
               </Button>
-            ))}
+            </Tooltip>
+            <Menu
+              sx={{ mt: "45px" }}
+              id="menu-appbar"
+              anchorEl={prueba}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              open={Boolean(prueba)}
+              MenuListProps={{onMouseLeave : handleProjBtnClose}}
+              disableScrollLock={true}
+            >
+              {pages.map((setting) => (
+                <MenuItem key={setting} onClick={handleProjBtnClose}>
+                  <Typography textAlign="center">{setting}</Typography>
+                </MenuItem>
+              ))}
+            </Menu>
           </Box>
-          <Button
-            onClick={handleCloseNavMenu}
-            sx={{
-              my: 2,
-              color: "white",
-              display: "block",
-              fontSize: "20px",
-              ":hover": { textShadow: "1px 1px 4px white" },
-            }}
-          >
-            Contact
-          </Button>
+
+          <Box sx={{ flexGrow: 0 }}>
+            <Button
+              onClick={handleProjBtnClose}
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+                fontSize: "20px",
+                ":hover": { textShadow: "1px 1px 4px white" },
+              }}
+            >
+              Contact
+            </Button>
+          </Box>
         </Toolbar>
       </Container>
     </AppBar>
