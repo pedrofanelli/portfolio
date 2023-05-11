@@ -3,26 +3,19 @@ import GetParticles from "./components/GetParticles";
 import Transition from "./components/Transition";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import { useEffect } from "react";
-import "./App.css";
-import transitionOpacity from "./utils/transitionOpacity";
+import Buttons from "./components/Buttons";
 
 function App() {
-  useEffect(() => {
-    let container = document.querySelectorAll("#hola");
-    transitionOpacity(container, false, true);
-  }, []);
-
   return (
     <>
       <GetParticles />
       <Navbar />
       <TopHead />
-      <div id="hola">
+      <div id="btnsVision">
         <Transition />
         <Footer />
       </div>
-      <div id="test">HOLA</div>
+      <Buttons />
     </>
   );
 }
