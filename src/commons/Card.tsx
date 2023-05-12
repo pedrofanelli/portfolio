@@ -8,7 +8,7 @@ const Card: FC<Props> = (prop) => {
   console.log("EY", prop.id);
   
   return (
-    <>
+    <div id={`card${prop.id}`}>
       <div className="titleContainer">
         <h2 id="title">The Movie DataBase {prop.id}</h2>
       </div>
@@ -19,7 +19,7 @@ const Card: FC<Props> = (prop) => {
         <h2>Buenas</h2>
         <img src="src/assets/cat.jpg" alt="Cat pic" />
       </div>
-    </>
+    </div>
   );
 };
 
