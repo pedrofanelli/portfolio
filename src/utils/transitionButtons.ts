@@ -18,7 +18,7 @@ function buildThresholdList() {
     let btn03 = document.getElementById("btn3");
     entries.forEach(
       (entry: any) => {
-        if (entry.intersectionRatio > 0.3) {
+        if (entry.intersectionRatio > 0.35) {
             
             if (entry.target.id === "card1") {
                 btn01 && (btn01.style.backgroundColor = "#e76f51")

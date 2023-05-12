@@ -5,7 +5,8 @@ import Card from "../commons/Card";
 
 const Transition = () => {
   let container, title1;
-  let varios = [1, 2, 3];
+  let ids = [1, 2, 3];
+  let projects = ["The Movie Database", "The Mobile Factory", "Broken Office"];
 
   useEffect(() => {
     container = document.querySelectorAll(".card");
@@ -16,8 +17,8 @@ const Transition = () => {
   
   return (
     <>
-      {varios.map((key) => (
-        <Card key={key} id={key} />
+      {ids.map((key, i) => (
+        <Card key={key} id={key} name={projects[i]} />
       ))}
     </>
   );
