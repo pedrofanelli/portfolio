@@ -13,6 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import "./Navbar.scss";
 import transitionOpacity from "../utils/transitionOpacity";
+import { Link } from "@mui/material";
 
 function Navbar() {
   useEffect(() => {
@@ -99,10 +100,12 @@ function Navbar() {
               disableScrollLock={true}
               MenuListProps={{ sx: { bgcolor: "#525a61", color: "white" } }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+              {pages.map((page, i) => (
+                <Link key={page} href={`#card${i + 1}`} color="inherit" underline="none">
+                  <MenuItem onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>
@@ -172,14 +175,16 @@ function Navbar() {
               disableScrollLock={true}
               MenuListProps={{ sx: { bgcolor: "#525a61", color: "white" } }}
             >
-              {pages.map((page) => (
-                <MenuItem
-                  key={page}
-                  onClick={handleProjBtnClose}
-                  sx={{ height: "50px" }}
-                >
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
+              {pages.map((page, i) => (
+                <Link key={page} href={`#card${i + 1}`} color="inherit" underline="none">
+                  <MenuItem
+                    key={page}
+                    onClick={handleProjBtnClose}
+                    sx={{ height: "50px" }}
+                  >
+                    <Typography textAlign="center">{page}</Typography>
+                  </MenuItem>
+                </Link>
               ))}
             </Menu>
           </Box>

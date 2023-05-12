@@ -6,6 +6,7 @@ import SmartphoneIcon from "@mui/icons-material/Smartphone";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import ArrowCircleUpIcon from "@mui/icons-material/ArrowCircleUp";
 import transitionButtons from "../utils/transitionButtons";
+import { Link } from "@mui/material";
 
 const Buttons = () => {
   useEffect(() => {
@@ -17,18 +18,26 @@ const Buttons = () => {
   }, []);
   return (
     <div id="containerBtns">
+      <Link href="#card1" color="inherit">
       <div id="btn1">
         <LocalMoviesIcon fontSize="large" />
       </div>
+      </Link>
+      <Link href="#card2" color="inherit">
       <div id="btn2">
         <SmartphoneIcon fontSize="large" />
       </div>
+      </Link>
+      <Link href="#card3" color="inherit">
       <div id="btn3">
         <SupportAgentIcon fontSize="large" />
       </div>
+      </Link>
+      <Link href="#navv" color="inherit">
       <div id="btn4">
         <ArrowCircleUpIcon fontSize="large" />
       </div>
+      </Link>
     </div>
   );
 };

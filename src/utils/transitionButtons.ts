@@ -21,15 +21,15 @@ function buildThresholdList() {
         if (entry.intersectionRatio > 0.3) {
             
             if (entry.target.id === "card1") {
-                btn01 && (btn01.style.backgroundColor = "red")
+                btn01 && (btn01.style.backgroundColor = "#e76f51")
                 btn02 && (btn02.style.backgroundColor = "#525a61")
                 btn03 && (btn03.style.backgroundColor = "#525a61")
             } else if (entry.target.id === "card2") {
-                btn02 && (btn02.style.backgroundColor = "red")
+                btn02 && (btn02.style.backgroundColor = "#e76f51")
                 btn01 && (btn01.style.backgroundColor = "#525a61")
                 btn03 && (btn03.style.backgroundColor = "#525a61")
             } else if (entry.target.id === "card3") {
-                btn03 && (btn03.style.backgroundColor = "red")
+                btn03 && (btn03.style.backgroundColor = "#e76f51")
                 btn01 && (btn01.style.backgroundColor = "#525a61")
                 btn02 && (btn02.style.backgroundColor = "#525a61")
             }
