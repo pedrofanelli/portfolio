@@ -31,9 +31,9 @@
   }
 } */
 
-#headContainer h1:hover {
+/* #headContainer h1:hover {
   text-shadow: 1px 1px 4px #f6f4f3;
-}
+} */
 
 @media only screen and (max-width: 840px) {
   #headContainer h1 {
@@ -49,4 +49,21 @@
   font-size: 1.5em;
   text-align: center;
   z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#headText img {
+  height: 12em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px 50px 30px;
+  border: solid 1px transparent;
+  transition: border 0.5s ease;
+  filter: saturate(170%);
+}
+#headText img:hover {
+  border: solid 1px whitesmoke;
+  transition: border 0.5s ease;
 }

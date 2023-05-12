@@ -141,7 +141,7 @@ function Navbar() {
               marginLeft: "20px",
             }}
           >
-            <Tooltip title="Projects">
+            <Tooltip title="">
               <Button
                 id="myProjects"
                 onClick={handleProjBtnOpen}
