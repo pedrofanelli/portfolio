@@ -14,9 +14,9 @@ const Card: FC<Props> = (prop) => {
         <h2 id="title">{prop.name}</h2>
       </div>
       <div className="card">
-        <div style={{display:"flex", flexDirection:"column", width:"800px", textAlign:"center"}}>
-          <h2>Technologies <br /> {prop.tech}</h2>
-          <h2>Description <br /> {prop.desc}</h2>
+        <div style={{display:"flex", flexDirection:"column", textAlign:"center", height:"80%"}}>
+          <h2>Technologies <br /> <span>{prop.tech}</span></h2>
+          <h2>Description <br /> <span>{prop.desc}</span></h2>
         </div>
         <img src="src/assets/cat.jpg" alt="Cat pic" />
       </div>

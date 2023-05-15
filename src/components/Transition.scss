@@ -1,50 +1,61 @@
 .card {
-    color: whitesmoke;
-    margin: 15px;
-    font-size: 1.5em;
-    z-index: 1;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    background-color: #F03A47;
-    height: 20em;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    transition: opacity 200ms;
+  color: whitesmoke;
+  margin: 15px;
+  font-size: 1.5em;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  //flex-wrap: wrap;
+  background-color: #f03a47;
+  //height: 20em;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: opacity 200ms;
 }
 
 .card h2 {
-    z-index: 1;
-    font-weight: 400;
-}
-
-.card h2 p {
-    font-size: 0.7em;
+  z-index: 1;
+  font-weight: 400;
 }
 
 .card img {
-    height: 300px;
-    z-index: 1;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 25%;
+  margin: 15px;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .titleContainer {
-    color: whitesmoke;
-    margin: 15px;
-    font-size: 4em;
-    z-index: 1;
-    text-align: center;
-    //background-color: red;
-    height: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    user-select: none;
+  color: whitesmoke;
+  margin: 15px;
+  font-size: 4em;
+  z-index: 1;
+  text-align: center;
+  //background-color: red;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
 }
 
 .titleContainer h2 {
-    z-index: 1;
-    font-weight: 400;
+  z-index: 1;
+  font-weight: 400;
+}
+
+.card span {
+  font-size: 70%;
+}
+
+@media screen and (max-width: 500px) {
+  .card span {
+    font-size: 70%;
+  }
+  .card {
+    font-size: 1em;
+    flex-wrap: wrap;
+  }
 }
