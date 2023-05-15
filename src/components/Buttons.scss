@@ -70,3 +70,30 @@
   height: 60px;
   transition: height 0.5s ease;
 }
+
+@media screen and (max-width: 500px) {
+  #btn4 {
+    right: 10px;
+  }
+  #btn3:hover {
+    width: 40px;
+    transition: width 0.5s ease;
+  }
+  #btn1:hover {
+    width: 40px;
+    transition: width 0.5s ease;
+  }
+  #btn2:hover {
+    width: 40px;
+    transition: width 0.5s ease;
+  }
+  #btn1 {
+    top: 20px;
+  }
+  #btn2 {
+    top: 90px;
+  }
+  #btn3 {
+    top: 160px;
+  }
+}

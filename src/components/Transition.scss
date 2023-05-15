@@ -14,11 +14,6 @@
   transition: opacity 200ms;
 }
 
-.card h2 {
-  z-index: 1;
-  font-weight: 400;
-}
-
 .card img {
   width: 25%;
   margin: 15px;
@@ -46,8 +41,17 @@
   font-weight: 400;
 }
 
-.card span {
+.card h2 {
+  z-index: 1;
+  font-weight: 400;
+  user-select: none;
+  color: #183059;
+}
+
+.card h2 span {
   font-size: 70%;
+  user-select: text;
+  color: white;
 }
 
 @media screen and (max-width: 500px) {
