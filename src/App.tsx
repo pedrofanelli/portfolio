@@ -9,12 +9,6 @@ function App() {
     <>
       <GetParticles />
       <Navbar />
-      {/* <TopHead />
-      <div id="btnsVision">
-        <Transition />
-        <Footer />
-      </div>
-      <Buttons /> */}
       <Routes>
         <Route path="/" element={<Principal />} />
         <Route path="/about" element={<About />} />

@@ -30,7 +30,7 @@ const TopHead = () => {
         <h1 id="headTitle">Pedro José Fanelli Ederra</h1>
         <div id="headText">
           <div style={{ margin: "20px" }}>
-            Full Stack Web Developer (and also Lawyer) <br /> with experience in
+            Full Stack Web Developer and also Lawyer <br /> with experience in
             <span className="boldWord"> Node.js</span> and
             <span className="boldWord"> React.js</span> <br /> Currently
             learning C# and .NET

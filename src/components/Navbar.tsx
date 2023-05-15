@@ -15,6 +15,8 @@ import "./Navbar.scss";
 import transitionOpacity from "../utils/transitionOpacity";
 import { Link } from "@mui/material";
 import { useNavigate } from "react-router";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -45,11 +47,11 @@ function Navbar() {
 
   const handleAboutBtn = () => {
     navigate("/about");
-  }
+  };
 
-  const handleProjLink = (i:number) => {
+  const handleProjLink = (i: number) => {
     navigate(`/#card${i + 1}`);
-  }
+  };
 
   return (
     <AppBar id="navv" position="static" sx={{ backgroundColor: "#F03A47" }}>
@@ -125,10 +127,10 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <AutoAwesomeIcon
+          {/* <AutoAwesomeIcon
             sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
             fontSize="large"
-          />
+          /> */}
           <Typography
             variant="h5"
             noWrap
@@ -210,6 +212,24 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
+
+          <a
+            href="https://www.linkedin.com/in/pedro-fanelli/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "white" }}
+          >
+            <LinkedInIcon sx={{ flexGrow: 0, mr: 1 }} fontSize="large" />
+          </a>
+
+          <a
+            href="https://github.com/pedrofanelli"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "white" }}
+          >
+            <GitHubIcon sx={{ flexGrow: 0, mr: 1 }} fontSize="large" />
+          </a>
 
           <Box sx={{ flexGrow: 0 }}>
             <Button
