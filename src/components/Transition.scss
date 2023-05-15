@@ -14,6 +14,30 @@
   transition: opacity 200ms;
 }
 
+.cardLeftContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 80%;
+}
+
+.cardLeftBtnCont {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#cardLeftButtons {
+  background-color: #183059;
+  transition: box-shadow 0.5s ease, opacity 0.5s ease;
+}
+
+#cardLeftButtons:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  transition: box-shadow 0.5s ease, opacity 0.5s ease;
+  opacity: 0.9;
+}
+
 /* .card a img {
   width: 25%;
   margin: 15px;

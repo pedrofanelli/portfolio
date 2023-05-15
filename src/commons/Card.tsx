@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { FC } from "react";
 
 interface Props {
@@ -14,14 +15,37 @@ const Card: FC<Props> = (prop) => {
         <h2 id="title">{prop.name}</h2>
       </div>
       <div className="card">
-        <div style={{display:"flex", flexDirection:"column", textAlign:"center", height:"80%"}}>
-          <h2>Technologies <br /> <span>{prop.tech}</span></h2>
-          <h2>Description <br /> <span>{prop.desc}</span></h2>
+        <div className="cardLeftContainer">
+          <h2>
+            Technologies <br /> <span>{prop.tech}</span>
+          </h2>
+          <h2>
+            Description <br /> <span>{prop.desc}</span>
+          </h2>
+          <div className="cardLeftBtnCont">
+            <Button
+              variant="contained"
+              sx={{ textTransform: "none" }}
+              href="http://"
+              target="_blank"
+              id="cardLeftButtons"
+            >
+              Documentation
+            </Button>
+            <Button
+              variant="contained"
+              sx={{ textTransform: "none" }}
+              href="http://"
+              target="_blank"
+              id="cardLeftButtons"
+            >
+              Web Page
+            </Button>
+          </div>
         </div>
         <a href="http://" target="_blank">
-        <img src="src/assets/cat.jpg" alt="Cat pic" />
+          <img src="src/assets/cat.jpg" alt="Cat pic" />
         </a>
-        
       </div>
     </div>
   );
