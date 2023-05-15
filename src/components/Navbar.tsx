@@ -14,8 +14,10 @@ import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import "./Navbar.scss";
 import transitionOpacity from "../utils/transitionOpacity";
 import { Link } from "@mui/material";
+import { useNavigate } from "react-router";
 
 function Navbar() {
+  const navigate = useNavigate();
   useEffect(() => {
     let nav = document.querySelectorAll("#navv");
     transitionOpacity(nav);
@@ -40,6 +42,14 @@ function Navbar() {
   const handleProjBtnClose = () => {
     setPrjBtn(null);
   };
+
+  const handleAboutBtn = () => {
+    navigate("/about");
+  }
+
+  const handleProjLink = (i:number) => {
+    navigate(`/#card${i + 1}`);
+  }
 
   return (
     <AppBar id="navv" position="static" sx={{ backgroundColor: "#F03A47" }}>
@@ -68,7 +78,7 @@ function Navbar() {
           >
             PJFE
           </Typography>
-          
+
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -101,7 +111,13 @@ function Navbar() {
               MenuListProps={{ sx: { bgcolor: "#525a61", color: "white" } }}
             >
               {pages.map((page, i) => (
-                <Link key={page} href={`#card${i + 1}`} color="inherit" underline="none">
+                <Link
+                  key={page}
+                  href={`/#card${i + 1}`}
+                  color="inherit"
+                  underline="none"
+                  onClick={() => handleProjLink(i)}
+                >
                   <MenuItem onClick={handleCloseNavMenu}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
@@ -117,7 +133,7 @@ function Navbar() {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -176,7 +192,13 @@ function Navbar() {
               MenuListProps={{ sx: { bgcolor: "#525a61", color: "white" } }}
             >
               {pages.map((page, i) => (
-                <Link key={page} href={`#card${i + 1}`} color="inherit" underline="none">
+                <Link
+                  key={page}
+                  href={`/#card${i + 1}`}
+                  color="inherit"
+                  underline="none"
+                  onClick={() => handleProjLink(i)}
+                >
                   <MenuItem
                     key={page}
                     onClick={handleProjBtnClose}
@@ -191,7 +213,7 @@ function Navbar() {
 
           <Box sx={{ flexGrow: 0 }}>
             <Button
-              onClick={handleProjBtnClose}
+              onClick={handleAboutBtn}
               sx={{
                 my: 2,
                 color: "white",

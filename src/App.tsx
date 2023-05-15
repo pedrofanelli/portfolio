@@ -1,21 +1,24 @@
-import TopHead from "./components/TopHead";
 import GetParticles from "./components/GetParticles";
-import Transition from "./components/Transition";
-import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
-import Buttons from "./components/Buttons";
+import { Route, Routes } from "react-router";
+import Principal from "./components/Principal";
+import About from "./components/About";
 
 function App() {
   return (
     <>
       <GetParticles />
       <Navbar />
-      <TopHead />
+      {/* <TopHead />
       <div id="btnsVision">
         <Transition />
         <Footer />
       </div>
-      <Buttons />
+      <Buttons /> */}
+      <Routes>
+        <Route path="/" element={<Principal />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   );
 }
