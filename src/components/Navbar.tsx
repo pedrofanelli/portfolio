@@ -57,8 +57,8 @@ function Navbar() {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 500,
+              //fontFamily: "monospace",
+              fontWeight: 700,
               fontSize: "2.5em",
               letterSpacing: ".3rem",
               color: "inherit",
@@ -68,7 +68,7 @@ function Navbar() {
           >
             PJFE
           </Typography>
-
+          
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
               size="large"
@@ -122,9 +122,9 @@ function Navbar() {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontSize: "2.5em",
-              fontWeight: 500,
+              //fontFamily: "monospace",
+              fontSize: "2em",
+              fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
