@@ -200,7 +200,7 @@ function Navbar() {
                 ":hover": { textShadow: "1px 1px 4px white" },
               }}
             >
-              Contact
+              About me
             </Button>
           </Box>
         </Toolbar>

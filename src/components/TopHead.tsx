@@ -1,5 +1,5 @@
 import "./TopHead.scss";
-import { useEffect } from "react";
+import { BaseSyntheticEvent, useEffect } from "react";
 import transitionOpacity from "../utils/transitionOpacity";
 import { Button } from "@mui/material";
 
@@ -12,8 +12,9 @@ const TopHead = () => {
     transitionOpacity(title);
   }, []);
 
-  function handleDownload() {
-    const filePath = "src/assets/PedroFanelliResume.pdf";
+  function handleDownload(e:BaseSyntheticEvent) {
+    let filePath = "src/assets/PedroFanelliEnglish.pdf";
+    if (e.target.innerText.includes("spanish")) filePath = "src/assets/PedroFanelliSpanish.pdf";
     const link = document.createElement("a");
     link.href = filePath;
     link.download = "Pedro Fanelli Resume.pdf";
@@ -27,12 +28,20 @@ const TopHead = () => {
       <div id="headContainer">
         <h1 id="headTitle">Pedro José Fanelli Ederra</h1>
         <div id="headText">
-          <div>
-            
-            FULL STACK WEB DEVELOPER y <br /> Abogado <br />
-            <Button variant="contained" onClick={handleDownload} >
-              Download Resume
-            </Button>
+          <div style={{ margin: "20px" }}>
+            Full Stack Web Developer (and also Lawyer) with experience in
+            <span className="boldWord"> Node.js</span> and{" "}
+            <span className="boldWord">React.js</span> <br /> Currently learning
+            C# and .NET
+            <br />
+            <div style={{ marginTop: "15px", display:"flex", justifyContent:"space-evenly" }}>
+              <Button variant="contained" onClick={(e)=>handleDownload(e)} sx={{textTransform:"none"}}>
+                Resume (spanish)
+              </Button>
+              <Button variant="contained" onClick={(e)=>handleDownload(e)} sx={{textTransform:"none"}}>
+                Resume (english)
+              </Button>
+            </div>
           </div>
 
           <img src="src/assets/myPic.jpg" alt="me" />
