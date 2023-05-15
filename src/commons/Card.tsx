@@ -18,7 +18,10 @@ const Card: FC<Props> = (prop) => {
           <h2>Technologies <br /> <span>{prop.tech}</span></h2>
           <h2>Description <br /> <span>{prop.desc}</span></h2>
         </div>
+        <a href="http://" target="_blank">
         <img src="src/assets/cat.jpg" alt="Cat pic" />
+        </a>
+        
       </div>
     </div>
   );
