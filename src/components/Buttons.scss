@@ -71,6 +71,43 @@
   transition: height 0.5s ease;
 }
 
+.gitLinkCont {
+  position: fixed;
+  bottom: 0;
+  left: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.gitLinkCont div {
+  color: whitesmoke;
+  height: 50px;
+  border-left: 3px solid white;
+  z-index: 1;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.gitLinkCont a {
+  color: white;
+  z-index: 1;
+}
+
+.gitLinkCont a {
+  .gitlink {
+    font-size: 50px;
+  }
+}
+
+.gitLinkCont a:hover {
+  .gitlink {
+    opacity: 0.9;
+  }
+}
+
 @media screen and (max-width: 500px) {
   #btn4 {
     right: 10px;
@@ -96,4 +133,8 @@
   #btn3 {
     top: 160px;
   }
+  .gitLinkCont {
+    left: 10px;
+  }
 }
+
