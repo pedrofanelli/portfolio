@@ -25,6 +25,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: 15px;
 }
 
 #cardLeftButtons {
@@ -46,18 +47,33 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 } */
 
-.card a img {
+/* .card a img {
   width: 100%;
   z-index: 1;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
+} */
 
-.card a {
+/* .card a #testtt {
+  width: 100%;
+  z-index: 1;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} */
+
+/* .card a {
   text-decoration: none;
   width: 40%;
   margin: 15px;
   z-index: 1;
+} */
+
+.card video {
+  border-radius: 10px;
+  width: 40%;
+  height: 40%;
+  z-index: 1;
+  margin: 10px;
 }
 
 .titleContainer {
@@ -99,5 +115,9 @@
   .card {
     font-size: 1em;
     flex-wrap: wrap;
+  }
+  .card video {
+    width: 80%;
+    height: 80%;
   }
 }
