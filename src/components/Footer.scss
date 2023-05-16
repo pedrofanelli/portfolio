@@ -7,10 +7,10 @@
   user-select: none;
 }
 
-.footer:hover {
-  text-decoration: underline;
+.footer p {
+  display: inline;
 }
 
-.footer p {
-  z-index: 1;
+.footer p:hover {
+  text-decoration: underline;
 }

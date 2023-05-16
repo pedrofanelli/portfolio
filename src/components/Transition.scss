@@ -39,41 +39,18 @@
   opacity: 0.9;
 }
 
-/* .card a img {
-  width: 25%;
-  margin: 15px;
-  z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
-
-/* .card a img {
-  width: 100%;
-  z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
-
-/* .card a #testtt {
-  width: 100%;
-  z-index: 1;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-} */
-
-/* .card a {
-  text-decoration: none;
-  width: 40%;
-  margin: 15px;
-  z-index: 1;
-} */
-
 .card video {
   border-radius: 10px;
   width: 40%;
   height: 40%;
   z-index: 1;
   margin: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: solid 1px transparent;
+}
+
+.card video:hover {
+  border: solid 1px whitesmoke;
 }
 
 .titleContainer {
