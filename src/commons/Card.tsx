@@ -1,6 +1,5 @@
 import { Button } from "@mui/material";
 import { FC } from "react";
-//import HoverVideoPlayer from "react-hover-video-player";
 
 interface Props {
   id: number;
@@ -44,27 +43,6 @@ const Card: FC<Props> = (prop) => {
             </Button>
           </div>
         </div>
-        
-        {/* <a id="testtt" href="http://" target="_blank">
-          <HoverVideoPlayer
-            videoSrc="src/assets/take2.mov"
-            pausedOverlay={
-              <img
-                src="src/assets/foto.png"
-                alt="pic"
-                style={{
-                  // Make the image expand to cover the video's dimensions
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "cover",
-                  borderRadius: "10px"
-                }}
-              />
-            }
-            restartOnPaused
-            unloadVideoOnPaused
-          />
-        </a> */}
 
         <video src="src/assets/take2.mov" autoPlay muted loop>Your browser does not support the video tag</video>
         
