@@ -14,6 +14,7 @@ interface Props {
 }
 
 const Card: FC<Props> = (prop) => {
+
   return (
     <div id={`card${prop.data.id}`}>
       <div className="titleContainer">
