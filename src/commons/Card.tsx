@@ -9,6 +9,7 @@ interface Props {
     tech: string;
     github: string;
     url: string;
+    videoPath: string;
   };
 }
 
@@ -48,7 +49,7 @@ const Card: FC<Props> = (prop) => {
           </div>
         </div>
 
-        <video src="src/assets/take2.mov" autoPlay muted loop>
+        <video src={`${prop.data.videoPath}`} autoPlay muted loop>
           Your browser does not support the video tag
         </video>
       </div>
