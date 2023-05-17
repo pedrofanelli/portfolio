@@ -22,7 +22,7 @@ function Navbar() {
     let nav = document.querySelectorAll("#navv");
     transitionOpacity(nav);
   }, []);
-  const pages = ["The Movie Database", "The Mobile Factory", "Broken Office"];
+  const pages = ["Broken Office", "The Mobile Factory", "The Movie Database"];
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
 
   const [prjBtn, setPrjBtn] = useState<null | HTMLElement>(null);
