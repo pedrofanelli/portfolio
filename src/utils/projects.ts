@@ -27,7 +27,7 @@ const projects = [
     tech: "Node.js, Express, PostgreSQL, JWT, React, and Redux",
     github: "https://github.com/pedrofanelli/TMDB",
     url: "",
-    videoPath: ""
+    videoPath: "src/assets/video3.mov"
   },
 ];
 
