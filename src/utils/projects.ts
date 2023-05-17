@@ -17,7 +17,7 @@ const projects = [
     tech: "Node.js, Express, PostgreSQL, JWT, React (Vite.js), Redux and MUI",
     github: "https://github.com/pedrofanelli/the-mobile-factory",
     url: "",
-    videoPath: "src/assets/take2.mov"
+    videoPath: "src/assets/video2.mov"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projects = [
     tech: "Node.js, Express, PostgreSQL, JWT, React, and Redux",
     github: "https://github.com/pedrofanelli/TMDB",
     url: "",
-    videoPath: "src/assets/take2.mov"
+    videoPath: "src/assets/video3.mov"
   },
 ];
 
