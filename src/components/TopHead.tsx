@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 const TopHead = () => {
   let text, title;
   useEffect(() => {
-    text = document.querySelectorAll("#headText");
+    text = document.querySelectorAll("#headBtns");
     title = document.querySelectorAll("#headTitle");
     transitionOpacity(text);
     transitionOpacity(title);
@@ -27,13 +27,12 @@ const TopHead = () => {
   return (
     <>
       <div id="headContainer">
-        <h1 id="headTitle">Pedro José Fanelli Ederra</h1>
-        <div id="headText">
+        <h1 id="headTitle">Pedro José Fanelli Ederra <br /> <span id="span1">FULL STACK WEB DEVELOPER</span> <br /> <span id="span2">Experience in <span className="boldWord"> Node.js</span> and <span className="boldWord"> React.js</span></span>  </h1>
+        {/* <div id="headText">
           <div style={{ margin: "20px" }}>
-            Full Stack Web Developer and also Lawyer <br /> with experience in
+            Experience in
             <span className="boldWord"> Node.js</span> and
-            <span className="boldWord"> React.js</span> <br /> Currently
-            learning C# and .NET
+            <span className="boldWord"> React.js</span>
             <br />
             <div
               style={{
@@ -60,8 +59,30 @@ const TopHead = () => {
           </div>
 
           <img src="src/assets/myPic.jpg" alt="me" />
-        </div>
+        </div> */}
       </div>
+      <div
+              id="headBtns"
+            >
+              <Button
+              size="large"
+              color="error"
+                variant="contained"
+                onClick={(e) => handleDownload(e)}
+                sx={{ textTransform: "none", marginRight:"2%" }}
+              >
+                Resume (spanish)
+              </Button>
+              <Button
+                size="large"
+                color="error"
+                  variant="contained"
+                onClick={(e) => handleDownload(e)}
+                sx={{ textTransform: "none", marginLeft:"2%" }}
+              >
+                Resume (english)
+              </Button>
+            </div>
     </>
   );
 };

@@ -4,6 +4,7 @@
   align-items: center;
   flex-direction: column;
   // position: relative;
+  margin-top: 120px;
 }
 
 #headContainer h1 {
@@ -11,13 +12,49 @@
   //text-transform: uppercase;
   letter-spacing: 0.05em;
   font-size: 4em;
-  text-shadow: 3px 3px 4px #f03a47;
+  //text-shadow: 3px 3px 4px #f03a47;
   //animation-name: sizeRepeat;
   //animation-duration: 6s;
   //animation-iteration-count: infinite;
   z-index: 1;
   user-select: none;
   font-weight: 400;
+  text-shadow: 2px 2px 4px black
+
+}
+
+#headTitle #span1 {
+  font-family: 'Quicksand', sans-serif;  
+  transition: color 0.5s ease;
+  font-size: 85px;
+}
+
+#headTitle #span2 {
+  font-size: 50px;
+}
+
+.boldWord {
+  color: #f03a47;
+  font-weight: bold;
+}
+
+#headTitle #span1:hover {
+  color: #f03a47;
+  transition: color 0.5s ease;
+}
+
+#headBtns {
+  margin-left: 120px;
+}
+
+#headBtns button {
+  background-color: #f03a47;
+  transition: opacity 0.3s ease;
+}
+
+#headBtns button:hover {
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
 }
 
 /* @keyframes sizeRepeat {
@@ -36,13 +73,8 @@
   text-shadow: 1px 1px 4px #f6f4f3;
 } */
 
-@media only screen and (max-width: 840px) {
-  #headContainer h1 {
-    text-align: center;
-  }
-}
 
-#headText {
+/* #headText {
   color: whitesmoke;
   //position: absolute;
   //top: 10em;
@@ -77,9 +109,28 @@
 #headText button:hover {
   opacity: 0.8;
   transition: opacity 0.3s ease;
-}
+} */
 
-.boldWord {
-  color: #f03a47;
-  font-weight: bold;
+@media only screen and (max-width: 800px) {
+  #headContainer {
+    margin-top: 170px;
+  }
+  #headContainer h1 {
+    text-align: center;
+    font-size: 1.7em;
+  }
+  #headTitle #span1 {
+    font-size: 40px;
+  }
+  #headTitle #span2 {
+    font-size: 20px;
+  }
+  #headBtns {
+    text-align: center;
+    margin-left: 0;
+  }
+  #headBtns button {
+    width: 175px;
+    height: 35px;
+  }
 }
