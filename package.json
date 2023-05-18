@@ -22,7 +22,8 @@
     "react-router-dom": "^6.11.1",
     "sass": "^1.62.1",
     "tsparticles": "^2.9.3",
-    "tsparticles-engine": "^2.9.3"
+    "tsparticles-engine": "^2.9.3",
+    "typed.js": "^2.0.16"
   },
   "devDependencies": {
     "@types/node": "^18.16.0",
