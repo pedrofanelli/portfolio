@@ -1,0 +1,16 @@
+#contactContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 300px;
+}
+
+#contactTitle h1 {
+    color: whitesmoke;
+    font-weight: 400;
+    font-size: 5em;
+    z-index: 1;
+    user-select: none;
+}
+
