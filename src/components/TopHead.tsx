@@ -13,9 +13,6 @@ const TopHead = () => {
     const typed = new Typed(el.current, {
       strings: [
         "Full Stack Web Developer",
-        "Backend",
-        "Frontend",
-        "Any end ;)"
       ],
       typeSpeed: 100,
       loop: true,
