@@ -6,7 +6,7 @@ interface Props {
     id: number;
     project: string;
     description: string;
-    tech: string;
+    tech: string[];
     github: string;
     url: string;
     videoPath: string;
@@ -14,7 +14,6 @@ interface Props {
 }
 
 const Card: FC<Props> = (prop) => {
-
   return (
     <div id={`card${prop.data.id}`}>
       <div className="titleContainer">
@@ -23,10 +22,16 @@ const Card: FC<Props> = (prop) => {
       <div className="card">
         <div className="cardLeftContainer">
           <h2>
-            Technologies <br /> <span>{prop.data.tech}</span>
+            Technologies <br />
+            <span id="cardLeftTechCont">
+              {prop.data.tech.map((single, i) => {
+                if (i === prop.data.tech.length - 1) return `${single}`
+                return `${single}` + " - "
+                })}
+            </span>
           </h2>
           <h2>
-            Description <br /> <span>{prop.data.description}</span>
+            Description <br /> <span id="cardLeftDesc">{prop.data.description}</span>
           </h2>
           <div className="cardLeftBtnCont">
             <Button
