@@ -13,11 +13,15 @@ const TopHead = () => {
     const typed = new Typed(el.current, {
       strings: [
         "Full Stack Web Developer",
-        "Node.js",
-        "React.js",
+        "Backend",
+        "Frontend",
+        "Any end ;)"
       ],
-      typeSpeed: 80,
+      typeSpeed: 100,
       loop: true,
+      loopCount: Infinity,
+      backSpeed: 30,
+      backDelay: 1500,
     });
 
     return () => {
@@ -108,9 +112,6 @@ const TopHead = () => {
         >
           Resume (english)
         </Button>
-      </div>
-      <div>
-        <span ref={el} />
       </div>
     </>
   );

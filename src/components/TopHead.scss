@@ -19,8 +19,8 @@
   z-index: 1;
   user-select: none;
   font-weight: 400;
-  text-shadow: 2px 2px 4px black
-
+  text-shadow: 2px 2px 4px black;
+  text-align: center;
 }
 
 #headTitle #span1 {
@@ -30,7 +30,7 @@
 }
 
 #headTitle #span2 {
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .boldWord {
@@ -44,7 +44,7 @@
 }
 
 #headBtns {
-  margin-left: 120px;
+  text-align: center;
 }
 
 #headBtns button {
