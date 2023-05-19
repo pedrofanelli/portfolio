@@ -4,12 +4,15 @@ import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { useState, MouseEvent } from "react";
 import axios from "axios";
+import { LoadingButton } from "@mui/lab";
 
 const Contact = () => {
   const [email, setEmail] = useState<string>("");
   const [text, setText] = useState<string>("");
   const [openSuccess, setOpenSuccess] = useState<boolean>(false);
   const [openFail, setOpenFail] = useState<boolean>(false);
+
+  const [load, setLoad] = useState<boolean>(false);
 
   const handleClose = () => {
     setOpenSuccess(false);
@@ -26,6 +29,7 @@ const Contact = () => {
     if (!text) return setOpenFail(true);
 
     try {
+      setLoad(true);
       const resp = await axios.post(
         import.meta.env.VITE_BACK,
         { email, text },
@@ -36,9 +40,11 @@ const Contact = () => {
       console.log(resp);
       setEmail("");
       setText("");
+      setLoad(false);
       setOpenSuccess(true);
     } catch (error) {
       console.log(error);
+      setLoad(false);
       setOpenFail(true);
     }
   };
@@ -144,22 +150,40 @@ const Contact = () => {
           onChange={(e) => setText(e.target.value)}
           value={text}
         />
-        <Button
-          type="submit"
-          size="large"
-          variant="contained"
-          onClick={(e) => handleContact(e)}
-          sx={{
-            textTransform: "none",
-            m: 2,
-            backgroundColor: "#f03a47",
-            ":hover": { backgroundColor: "#f03a47", opacity: 0.9 },
-            boxShadow:
-              "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-          }}
-        >
-          SEND
-        </Button>
+        {!load ? (
+          <Button
+            type="submit"
+            size="large"
+            variant="contained"
+            onClick={(e) => handleContact(e)}
+            sx={{
+              textTransform: "none",
+              m: 2,
+              backgroundColor: "#f03a47",
+              ":hover": { backgroundColor: "#f03a47", opacity: 0.9 },
+              boxShadow:
+                "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+            }}
+          >
+            SEND
+          </Button>
+        ) : (
+          <LoadingButton
+            loading
+            variant="outlined"
+            sx={{
+              textTransform: "none",
+              m: 2,
+              backgroundColor: "#f03a47",
+              boxShadow:
+                "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+              height: "42px",
+              width:"85px"
+            }}
+          >
+            Submit
+          </LoadingButton>
+        )}
       </Box>
     </div>
   );
