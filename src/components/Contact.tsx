@@ -2,7 +2,27 @@ import { Button } from "@mui/material";
 import "./Contact.scss";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
+import { useState, MouseEvent } from "react";
+
 const Contact = () => {
+  const [email, setEmail] = useState<string>("");
+  const [text, setText] = useState<string>("");
+
+  const handleContact = (e: MouseEvent<HTMLElement>) => {
+    e.preventDefault();
+    console.log(text);
+    console.log(email);
+
+    const mailValidation = new RegExp(
+      /^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,})+$/
+    );
+    if (!mailValidation.test(email)) return console.log("ERROR");
+    
+
+    setEmail("");
+    setText("");
+  };
+
   return (
     <div id="contactContainer">
       <div id="contactTitle">
@@ -43,10 +63,11 @@ const Contact = () => {
       >
         <TextField
           required
+          className="contactInput"
           id="outlined-required"
           label="Your email"
           //defaultValue="Hello World"
-          sx={{ m: 1, width: "600px" }}
+          sx={{ m: 1 }}
           inputProps={{
             style: {
               color: "white",
@@ -54,8 +75,11 @@ const Contact = () => {
                 "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
             },
           }}
+          onChange={(e) => setEmail(e.target.value)}
+          value={email}
         />
         <TextField
+          className="contactInput"
           required
           id="outlined-multiline-flexible"
           label="Text"
@@ -63,17 +87,18 @@ const Contact = () => {
           rows={8}
           sx={{
             m: 1,
-            width: "600px",
             boxShadow:
               "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
           }}
           inputProps={{ style: { color: "white" } }}
+          onChange={(e) => setText(e.target.value)}
+          value={text}
         />
         <Button
           type="submit"
           size="large"
           variant="contained"
-          //onClick={(e) => handleDownload(e)}
+          onClick={(e) => handleContact(e)}
           sx={{
             textTransform: "none",
             m: 2,
