@@ -18,8 +18,6 @@ const Contact = () => {
 
   const handleContact = async (e: MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    console.log(text);
-    console.log(email);
 
     const mailValidation = new RegExp(
       /^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,})+$/
@@ -29,7 +27,7 @@ const Contact = () => {
 
     try {
       const resp = await axios.post(
-        `http://localhost:3001`,
+        import.meta.env.VITE_BACK,
         { email, text },
         {
           withCredentials: true,
