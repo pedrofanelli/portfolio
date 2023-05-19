@@ -3,6 +3,7 @@ import "./Contact.scss";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import { useState, MouseEvent } from "react";
+import axios from "axios";
 
 const Contact = () => {
   const [email, setEmail] = useState<string>("");
@@ -15,7 +16,7 @@ const Contact = () => {
     setOpenFail(false);
   };
 
-  const handleContact = (e: MouseEvent<HTMLElement>) => {
+  const handleContact = async (e: MouseEvent<HTMLElement>) => {
     e.preventDefault();
     console.log(text);
     console.log(email);
@@ -26,20 +27,53 @@ const Contact = () => {
     if (!mailValidation.test(email)) return setOpenFail(true);
     if (!text) return setOpenFail(true);
 
-    setEmail("");
-    setText("");
-    setOpenSuccess(true)
+    try {
+      const resp = await axios.post(
+        `http://localhost:3001`,
+        { email, text },
+        {
+          withCredentials: true,
+        }
+      );
+      console.log(resp);
+      setEmail("");
+      setText("");
+      setOpenSuccess(true);
+    } catch (error) {
+      console.log(error);
+      setOpenFail(true);
+    }
   };
 
   return (
     <div id="contactContainer">
-      <Snackbar open={openSuccess} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
-        <Alert onClose={handleClose} variant="filled" severity="success" sx={{ width: "100%" }}>
+      <Snackbar
+        open={openSuccess}
+        autoHideDuration={3000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleClose}
+          variant="filled"
+          severity="success"
+          sx={{ width: "100%" }}
+        >
           The email was sent!
         </Alert>
       </Snackbar>
-      <Snackbar open={openFail} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
-        <Alert onClose={handleClose} variant="filled" severity="error" sx={{ width: "100%" }}>
+      <Snackbar
+        open={openFail}
+        autoHideDuration={3000}
+        onClose={handleClose}
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      >
+        <Alert
+          onClose={handleClose}
+          variant="filled"
+          severity="error"
+          sx={{ width: "100%" }}
+        >
           Complete with valid information
         </Alert>
       </Snackbar>
