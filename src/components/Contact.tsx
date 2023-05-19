@@ -1,4 +1,4 @@
-import { Button } from "@mui/material";
+import { Alert, Button, Snackbar } from "@mui/material";
 import "./Contact.scss";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -7,6 +7,13 @@ import { useState, MouseEvent } from "react";
 const Contact = () => {
   const [email, setEmail] = useState<string>("");
   const [text, setText] = useState<string>("");
+  const [openSuccess, setOpenSuccess] = useState<boolean>(false);
+  const [openFail, setOpenFail] = useState<boolean>(false);
+
+  const handleClose = () => {
+    setOpenSuccess(false);
+    setOpenFail(false);
+  };
 
   const handleContact = (e: MouseEvent<HTMLElement>) => {
     e.preventDefault();
@@ -16,15 +23,26 @@ const Contact = () => {
     const mailValidation = new RegExp(
       /^\w+([.-]?\w+)@\w+([.-]?\w+)(\.\w{2,})+$/
     );
-    if (!mailValidation.test(email)) return console.log("ERROR");
-    
+    if (!mailValidation.test(email)) return setOpenFail(true);
+    if (!text) return setOpenFail(true);
 
     setEmail("");
     setText("");
+    setOpenSuccess(true)
   };
 
   return (
     <div id="contactContainer">
+      <Snackbar open={openSuccess} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
+        <Alert onClose={handleClose} variant="filled" severity="success" sx={{ width: "100%" }}>
+          The email was sent!
+        </Alert>
+      </Snackbar>
+      <Snackbar open={openFail} autoHideDuration={3000} onClose={handleClose} anchorOrigin={{ vertical: "top", horizontal: "center" }}>
+        <Alert onClose={handleClose} variant="filled" severity="error" sx={{ width: "100%" }}>
+          Complete with valid information
+        </Alert>
+      </Snackbar>
       <div id="contactTitle">
         <h1>Contact</h1>
       </div>
@@ -82,7 +100,7 @@ const Contact = () => {
           className="contactInput"
           required
           id="outlined-multiline-flexible"
-          label="Text"
+          label="Write to me anything here..."
           multiline
           rows={8}
           sx={{
