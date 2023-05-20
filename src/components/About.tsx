@@ -14,7 +14,7 @@ Through my training and experience in law, I have developed skills that help me 
 As a developer throughout the Plataforma 5 Bootcamp, I worked on several exciting projects (such as the internship for Globant) where I was able to collaborate with the team to create unique and high-quality applications. The exercise of the SCRUM methodology was fundamental throughout the development of the projects, turning out to be an invaluable experience. <br />
 
 I am excited and motivated about this new career in technology and am looking forward to continuing to learn and grow as a web developer. I am always open to new opportunities and look forward to working on innovative and challenging projects in the future 💫</div>
-        <img src="src/assets/myPic.jpg" alt="me" />
+        <img src="/myPic.jpg" alt="me" />
       </div>
       <Footer />
     </>

@@ -35,9 +35,9 @@ const TopHead = () => {
   }, []);
 
   function handleDownload(e: BaseSyntheticEvent) {
-    let filePath = "src/assets/PedroFanelliEnglish.pdf";
+    let filePath = "/PedroFanelliEnglish.pdf";
     if (e.target.innerText.includes("spanish"))
-      filePath = "src/assets/PedroFanelliSpanish.pdf";
+      filePath = "/PedroFanelliSpanish.pdf";
     const link = document.createElement("a");
     link.href = filePath;
     link.download = "Pedro Fanelli Resume.pdf";

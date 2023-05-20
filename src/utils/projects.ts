@@ -7,7 +7,7 @@ const projects = [
     tech: ["Node.js", "Express", "MongoDB Atlas", "JWT", "Socket.IO", "Google Cloud (Storage and Maps)", "ML5", "Teachable Machine", "React", "Redux", "MUI", "PWA", "AWS"],
     github: "https://github.com/pedrofanelli/BrokenOffice-back",
     url: "https://d1w75bllqpy7f0.cloudfront.net/",
-    videoPath: "src/assets/video1.mov"
+    videoPath: "/video1.mov"
   },
   {
     id: 2,
@@ -17,7 +17,7 @@ const projects = [
     tech: ["Node.js", "Express", "PostgreSQL", "JWT", "React (Vite.js)", "Redux", "MUI"],
     github: "https://github.com/pedrofanelli/the-mobile-factory",
     url: "",
-    videoPath: "src/assets/video2.mov"
+    videoPath: "/video2.mov"
   },
   {
     id: 3,
@@ -27,7 +27,7 @@ const projects = [
     tech: ["Node.js", "Express", "PostgreSQL", "JWT", "React", "Redux"],
     github: "https://github.com/pedrofanelli/TMDB",
     url: "",
-    videoPath: "src/assets/video3.mov"
+    videoPath: "/video3.mov"
   },
 ];
 
