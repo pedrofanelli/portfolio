@@ -12,19 +12,19 @@ const GetParticles = () => {
     await loadFull(engine);
   }, []);
 
-  const particlesLoaded = useCallback(
+  /* const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
       console.log(container);
     },
     []
-  );
+  ); */
 
   return (
     <Particles
       style={{zIndex:0}}
       id="tsparticles"
       init={particlesInit}
-      loaded={particlesLoaded}
+      //loaded={particlesLoaded}
       options={{
         /* background: {
                     color: {

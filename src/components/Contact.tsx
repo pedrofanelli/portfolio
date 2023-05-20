@@ -30,20 +30,18 @@ const Contact = () => {
 
     try {
       setLoad(true);
-      const resp = await axios.post(
+      await axios.post(
         import.meta.env.VITE_BACK,
         { email, text },
         {
           withCredentials: true,
         }
       );
-      console.log(resp);
       setEmail("");
       setText("");
       setLoad(false);
       setOpenSuccess(true);
     } catch (error) {
-      console.log(error);
       setLoad(false);
       setOpenFail(true);
     }
