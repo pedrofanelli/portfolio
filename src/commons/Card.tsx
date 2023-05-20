@@ -25,8 +25,8 @@ const Card: FC<Props> = (prop) => {
             Technologies <br />
             <span id="cardLeftTechCont">
               {prop.data.tech.map((single, i) => {
-                if (i === prop.data.tech.length - 1) return `${single}`
-                return `${single}` + " - "
+                if (i === prop.data.tech.length - 1) return (<span id="cardLeftTechItem">{`${single}`}</span>)
+                return (<span id="cardLeftTechItem">{`${single}` + " - "}</span>)
                 })}
             </span>
           </h2>

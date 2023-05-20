@@ -86,6 +86,15 @@
   color: white;
 }
 
+#cardLeftTechItem:hover {
+  color: #183059;
+}
+
+#cardLeftTechItem {
+  font-size: 100%;
+}
+
+
 @media screen and (max-width: 500px) {
   .card span {
     font-size: 70%;
