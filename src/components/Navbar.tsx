@@ -51,6 +51,10 @@ function Navbar() {
     navigate(`/#card${i + 1}`);
   };
 
+  const handleContactBtn = () => {
+    navigate("/#contactContainer");
+  }
+
   return (
     <AppBar id="navv" position="static" sx={{ backgroundColor: "#F03A47" }}>
       <Container maxWidth="xl">
@@ -125,10 +129,10 @@ function Navbar() {
               ))}
             </Menu>
           </Box>
-          <AutoAwesomeIcon
+          {/* <AutoAwesomeIcon
             sx={{ display: { xs: "flex", md: "none" }, mr: 1 }}
             fontSize="large"
-          />
+          /> */}
           <Typography
             variant="h5"
             noWrap
@@ -215,12 +219,28 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
             <Button
               id="myProjects"
+              onClick={handleContactBtn}
+              sx={{
+                my: 2,
+                color: "white",
+                display: "block",
+                //fontSize: "20px",
+                ":hover": { textShadow: "1px 1px 4px white" },
+              }}
+              href="/#contactContainer"
+            >
+              Contact
+            </Button>
+          </Box>
+          <Box sx={{ flexGrow: 0 }}>
+            <Button
+              id="myProjects"
               onClick={handleAboutBtn}
               sx={{
                 my: 2,
                 color: "white",
                 display: "block",
-                fontSize: "20px",
+                //fontSize: "20px",
                 ":hover": { textShadow: "1px 1px 4px white" },
               }}
             >

@@ -1,9 +1,10 @@
 #myProjects {
-    position: relative;
+  position: relative;
+  font-size: 20px;
 }
 
 #myProjects:after {
-    content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -16,10 +17,16 @@
 }
 
 #myProjects:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 #navv a:hover {
-    opacity: 0.9;
+  opacity: 0.9;
+}
+
+@media screen and (max-width: 500px) {
+  #myProjects {
+    font-size: 15px;
+  }
 }
