@@ -25,33 +25,49 @@ const Card: FC<Props> = (prop) => {
             Technologies <br />
             <span id="cardLeftTechCont">
               {prop.data.tech.map((single, i) => {
-                if (i === prop.data.tech.length - 1) return (<span id="cardLeftTechItem">{`${single}`}</span>)
-                return (<span id="cardLeftTechItem">{`${single}` + " - "}</span>)
-                })}
+                if (i === prop.data.tech.length - 1)
+                  return <span key={i} id="cardLeftTechItem">{`${single}`}</span>;
+                return <span key={i} id="cardLeftTechItem">{`${single}` + " - "}</span>;
+              })}
             </span>
           </h2>
           <h2>
-            Description <br /> <span id="cardLeftDesc">{prop.data.description}</span>
+            Description <br />
+            <span id="cardLeftDesc">{prop.data.description}</span>
           </h2>
           <div className="cardLeftBtnCont">
-            <Button
-              variant="contained"
-              sx={{ textTransform: "none" }}
-              href={`${prop.data.github}`}
-              target="_blank"
-              id="cardLeftButtons"
-            >
-              Documentation
-            </Button>
-            <Button
-              variant="contained"
-              sx={{ textTransform: "none" }}
-              href={`${prop.data.url}`}
-              target="_blank"
-              id="cardLeftButtons"
-            >
-              Web Page
-            </Button>
+            {prop.data.url ? (
+              <>
+                <Button
+                  variant="contained"
+                  sx={{ textTransform: "none" }}
+                  href={`${prop.data.github}`}
+                  target="_blank"
+                  id="cardLeftButtons"
+                >
+                  Documentation
+                </Button>
+                <Button
+                  variant="contained"
+                  sx={{ textTransform: "none" }}
+                  href={`${prop.data.url}`}
+                  target="_blank"
+                  id="cardLeftButtons"
+                >
+                  Web Page
+                </Button>
+              </>
+            ) : (
+              <Button
+                variant="contained"
+                sx={{ textTransform: "none" }}
+                href={`${prop.data.github}`}
+                target="_blank"
+                id="cardLeftButtons"
+              >
+                Documentation
+              </Button>
+            )}
           </div>
         </div>
 
